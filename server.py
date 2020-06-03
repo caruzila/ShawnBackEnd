@@ -5,9 +5,9 @@ app = Flask(__name__)
 
 @app.route('/api/users')
 def listusers():
-    since = request.args.get("since")
-    ret = github_requests.getUsers(since)
-    return jsonify(ret)
+	since = request.args.get("since")
+	ret = github_requests.getUsers(since)
+	return jsonify(ret)
 
 @app.route('/api/users/<username>/details')
 def userdetails(username):
