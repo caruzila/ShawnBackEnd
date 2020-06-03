@@ -15,3 +15,4 @@ def getUserDetails(name):
 def getUserRepos(name):
 	r = requests.get(apiUrlUser + name + '/repos')
 	return r.json()
+ 
